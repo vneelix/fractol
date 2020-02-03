@@ -16,6 +16,8 @@ Calculations are distributed using **pthread** functions, so
    + #### enter
 - ### Change fractals
    + #### NUM[1 - 7]
+- ### Show control
+   + #### NUM0
 
 ## Control for julia
   - ### Movement, change iter and change color unchanged.
