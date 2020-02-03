@@ -1,7 +1,7 @@
 # fractol
 This project is meant to create graphically fractals.
 
-Calculations are distributed using **pthread** functions, so 
+Calculations are distributed using **pthread** functions
 
 ## Control:
 - ### Movement
