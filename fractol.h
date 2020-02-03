@@ -36,11 +36,6 @@
 # include <pthread.h>
 
 /*
-** remove it
-*/
-# include <stdio.h>
-
-/*
 ** structs
 */
 
