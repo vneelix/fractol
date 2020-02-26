@@ -30,7 +30,7 @@ static int		mlx_prepare(t_fractol *f, int line, int color, int endian)
 	if ((f->mlx.img_add = mlx_get_data_addr(
 		f->mlx.img_ptr, &color, &line, &endian)) == NULL)
 	{
-		mlx_destroy_image(f->mlx.ptr, f->mlx.win);
+		mlx_destroy_image(f->mlx.ptr, f->mlx.img_ptr);
 		mlx_destroy_window(f->mlx.ptr, f->mlx.win);
 		free(f->mlx.ptr);
 		return (-1);
