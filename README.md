@@ -15,7 +15,7 @@ Calculations are distributed using **pthread** functions
 - ### Reset
    + #### enter
 - ### Change fractals
-   + #### NUM[1 - 7]
+   + #### 1, 2, 3, 4, 5, 6, 7, 0
 - ### Show control
    + #### NUM0
 
