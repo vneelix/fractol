@@ -20,7 +20,6 @@
 # include <SDL2/SDL.h>
 # include <SDL2/SDL_keyboard.h>
 # include <pthread.h>
-# include <stdio.h>
 
 /*
 ** structs
