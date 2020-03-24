@@ -7,7 +7,7 @@ MODE = release
 CC = clang
 CFLAGS = -c -Wall -Wextra -Werror -O2 -I$(INC_P)
 DFLAGS = -c -g -O0 -I$(INC_P)
-LFLAGS = -lm -lSDL2 -lpthread -o $(NAME)
+LFLAGS = -lm -lSDL2 -lOpenCL -o $(NAME)
 SRC = $(wildcard $(SRC_P)*.c)
 OBJ = $(SRC:$(SRC_P)%.c=$(OBJ_P)%.o)
 INC = $(wildcard $(INC_P)*.h)

@@ -30,7 +30,7 @@ static void	correct_queue(void)
 	SDL_EventState(SDL_MOUSEMOTION, SDL_ENABLE);
 }
 
-int			sdl_loop(t_sdl *sdl, t_block *b)
+int			sdl_loop(t_sdl *sdl, t_fractol *f)
 {
 	int			ret = 1, quit = 0;
 
@@ -41,19 +41,22 @@ int			sdl_loop(t_sdl *sdl, t_block *b)
 			if (sdl->event.type == SDL_QUIT)
 				quit = 1;
 			else if (sdl->event.type == SDL_KEYDOWN)
-				ret = sdl_keyhook(sdl, b);
+				ret = sdl_keyhook(sdl, f);
 			else if (sdl->event.type == SDL_MOUSEMOTION)
 			{
-				if (b->f->set == 0 && b->f->julia_l == 0)
-					ret = sdl_mousemove(sdl, b);
+				if (f->set == 0 && f->julia_l == 0)
+					ret = sdl_mousemove(sdl, f);
 			}
 			else if (sdl->event.type == SDL_MOUSEWHEEL)
 			{
-				if ((b->f->set == 0 && b->f->julia_l == 1) || b->f->set != 0)
-					ret = sdl_mousehook(sdl, b);
+				if ((f->set == 0 && f->julia_l == 1) || f->set != 0)
+					ret = sdl_mousehook(sdl, f);
 			}
 			else if (sdl->event.window.event == SDL_WINDOWEVENT_RESIZED)
-				ret = sdl_winresize(sdl, &(b));
+			{
+				f->sdl.surf = SDL_GetWindowSurface(f->sdl.win);
+				ret = 0;
+			}
 			else if (sdl->event.window.event == SDL_WINDOWEVENT_RESTORED)
 				SDL_UpdateWindowSurface(sdl->win);
 			else
@@ -61,11 +64,13 @@ int			sdl_loop(t_sdl *sdl, t_block *b)
 			if (!ret)
 			{
 				correct_queue();
-				start_pthread(b);
+				if (opencl_launch(f))
+					ft_exit(f);
+				SDL_UpdateWindowSurface(f->sdl.win);
 			}
 			ret = 1;
 		}
 	}
-	ft_exit(b->f, b);
+	ft_exit(f);
 	return (0);
 }
