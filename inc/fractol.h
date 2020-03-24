@@ -9,7 +9,7 @@
 /*
 ** count iterations
 */
-# define ITER 64
+# define ITER 128
 
 /*
 ** libc

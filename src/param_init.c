@@ -31,11 +31,11 @@ int		multib0_init(void *arg)
 {
 	t_fractol *f = arg;
 	
-	f->attr.scale = 250;
-	f->attr.mov_x = 2.04;
-	f->attr.mov_y = 1.4;
+	f->attr.scale = 200;
+	f->attr.mov_x = 2.5;
+	f->attr.mov_y = 1.8;
 	f->attr.itera = ITER;
-	f->attr.shift_c = 0;
+	f->attr.shift_c = 0.08;
 	return (0);
 }
 
@@ -92,8 +92,8 @@ int		bird_init(void *arg)
 	t_fractol *f = arg;
 	
 	f->attr.scale = 250;
-	f->attr.mov_x = 3.25;
-	f->attr.mov_y = 1.8;
+	f->attr.mov_x = 2.75;
+	f->attr.mov_y = 1.5;
 	f->attr.itera = ITER;
 	f->attr.shift_c = 1.0;
 	return (0);
