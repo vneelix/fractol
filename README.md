@@ -1,7 +1,7 @@
 # fractol
 This project is meant to create graphically fractals.
 Project based on SDL2 2.0.8 library, check whether the library is available on your system.
-This version uses the **GPU** available on your system **(OPENCL)** 
+This version uses the **GPU** available on your system **(OpenCL)** 
 
 ## Control:
 - ### Movement
