@@ -2,7 +2,7 @@
 
 void		ft_exit(t_fractol *f)
 {
-	SDL_DestroyWindow(f->sdl->win);
+	SDL_DestroyWindow(f->sdl.win);
 	SDL_Quit();
 	opencl_release(&(f->cl), 0);
 	if (f != NULL)
