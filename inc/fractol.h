@@ -38,7 +38,7 @@ typedef struct	s_sdl{
 	SDL_Event			event;
 }				t_sdl;
 
-typedef struct __attribute__ ((aligned)) s_attr{
+typedef struct __attribute__ ((packed)) s_attr{
 	double				scale;
 	double				mov_x;
 	double				mov_y;
