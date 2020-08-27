@@ -1,6 +1,6 @@
 #pragma OPENCL EXTENSION cl_khr_fp64 : enable
 
-struct __attribute__ ((packed)) s_attr{
+struct s_attr{
 	double		scale;
 	double		mov_x;
 	double		mov_y;

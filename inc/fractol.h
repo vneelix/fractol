@@ -18,8 +18,8 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <math.h>
-# include <SDL2/SDL.h>
-# include <SDL2/SDL_keyboard.h>
+# include "SDL2/SDL.h"
+# include "SDL2/SDL_keyboard.h"
 # define CL_USE_DEPRECATED_OPENCL_1_2_APIS
 #ifdef __APPLE__
 # include <OpenCL/opencl.h>
@@ -38,7 +38,7 @@ typedef struct	s_sdl{
 	SDL_Event			event;
 }				t_sdl;
 
-typedef struct __attribute__ ((packed)) s_attr{
+typedef struct s_attr{
 	double				scale;
 	double				mov_x;
 	double				mov_y;
