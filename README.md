@@ -6,7 +6,7 @@ The number of iterations is set in **header file (#define ITER)**, **more iterat
 
 <figure>
     <img src="pic/mandelbrot.png" />
-    <figcaption>Caption goes here</figcaption>
+    <figcaption>Mandelbrot set</figcaption>
 </figure>
 
 ## Control:
