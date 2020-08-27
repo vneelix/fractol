@@ -4,7 +4,10 @@ Project based on SDL2 2.0.8 library, check whether the library is available on y
 This version uses the **GPU** available on your system **(OpenCL)**.  
 The number of iterations is set in **header file (#define ITER)**, **more iterations - more calculations!**
 
-#<p align="center"><img src="pic/mandelbrot.png" /></p>
+<figure>
+    <img src="pic/mandelbrot.png" />
+    <figcaption>Caption goes here</figcaption>
+</figure>
 
 ## Control:
 - ### Movement
