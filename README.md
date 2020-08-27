@@ -5,7 +5,7 @@ This version uses the **GPU** available on your system **(OpenCL)**.
 The number of iterations is set in **header file (#define ITER)**, **more iterations - more calculations!**
 
 <figure>
-    <p align="center"><Mandelbrot/></p>
+    <p align="center" TEXT/p>
     <img src="pic/mandelbrot.png" />
 </figure>
 
