@@ -17,8 +17,8 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <math.h>
-# include <SDL2/SDL.h>
-# include <SDL2/SDL_keyboard.h>
+# include "SDL2/SDL.h"
+# include "SDL2/SDL_keyboard.h"
 # include <pthread.h>
 
 /*
@@ -100,6 +100,6 @@ int				sdl_mousemove(t_sdl *sdl, t_block *b);
 int				sdl_winresize(t_sdl *sdl, t_block **b);
 
 # define CONTROL_INFO	"Movement - arrows\nScale - mousewheel\nChange ITER - \'+\' \'-\'\n\
-Color- pgup pgdown\nChange fract - 1, 2, 3, 4, 5, 6, 7, 0\nReset - return\n"
+Color - pgup pgdown\nChange fract - 1, 2, 3, 4, 5, 6, 7, 0\nReset - return\n"
 
 #endif
